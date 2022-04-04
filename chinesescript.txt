@@ -1,24 +1,31 @@
-zhū lù kě: Nǐ hǎo a wǒ shì xīn lái. 
-Jason: Nǐ hǎo a, lái dài nǐ cānguān wǒmen de xuéxiào 
-zhū lù kě: Hǎo a, tài xièxiè nǐ la. 
-Jason: Wǒmen xiān qù kàn kàn lǎoshīmen de bàngōngshì. Nǐ kàn, bàngōngshì zài běi, rúguǒ nǐ yào zhǎo lǎoshī jiù lái zhèlǐ. 
-Zhū lù kě: Hǎo de, yǐhòu yào zhǎo lǎoshī jiù lái zhèlǐ. 
-Jason: Wǒmen xiànzài qù nánbian de tǐyùguǎn kàn kàn. 
-Zhū lù kě: Hǎo 
-Jason: Nǐ kàn, xiànzài yǒu yīgè bānjí zài shàng tǐyù kè, tā huì zuò hěnduō jīliè yùndòng xiàngmù. 
-Zhū lù kě: Tài hǎole, wǒ yǐhòu yě huì lái zhèlǐ shàng tǐyù kè. 
-Jiā mù sī: Nǐ hǎo a, nǐmen zài zhèlǐ gàn ma? 
-Jason: Nǐ hǎo a, wǒ zài dài luke qù cānguān wǒmen de xiàoyuán. 
-Jiā mù sī: Nǎ hǎo a, wǒ zhèngzài shàng tǐyù kè, kě yǒuqù la. 
-Jason: Hǎo a, xiàkè zàijiàn. 
-Jiā mù sī: Hǎo 
-Jason: Wǒmen jìxù cānguān ba. Zài dōngbian shì cāochǎng, méishénme hǎokàn de. 
-Jason: Zài xībian shì wǒmen de jiàoshì, yěshì nǐ jiānglái lái xuéxí dì dìfāng. Zhège jiàoshì kàn qǐlái hěn kuānchàng, xuéxí de shíhòu yěyǒu hěnduō kōngjiān. 
-Zhū lù kě: Zhège shìgè hěn hǎo de xuéxí huánjìng. 
-Jason: Shì de, wǒmen xiànzài qù xiàoyuán zhōngjiān chī wǔfàn, zhèlǐ jiùshì shítáng hé zhuōzi hé yǐzi. 
-Jiā mù sī: Nǐ hǎo a. 
-Zhū lù kě: Wǒmen zuò xià liáo ba. 
-Jason: Wǒmen yǐjīng cānguānle suǒyǒu dìfāng de. Xiàkè líng xiǎng hòu nǐ jiù kěyǐ huí jiāle. 
-Zhū lù kě: Hǎo.(Pause for 4 seconds) líng xiǎngle, wǒ xiànzài yào huí jiāle. 
-Jiā mù sī: Hǎo de, bàibài 
-Jason:Luke bàibài nǐ huí jiā ba.
+School Campus
+East 东：操场
+South 南：体育馆
+West 西：教室
+North 北：办公室
+
+
+猪路可: 你好啊我是新来。
+Jason: 你好啊，来带你参观我们的学校
+猪路可: 好啊，太谢谢你啦。
+Jason: 我们先去看看老师们的办公室。你看，办公室在北，如果你要找老师就来这里。
+猪路可: 好的，以后要找老师就来这里。
+Jason: 我们现在去南边的体育馆看看。
+猪路可: 好
+Jason: 你看，现在有一个班级在上体育课，他会做很多激烈运动项目。
+猪路可：太好了，我以后也会来这里上体育课。
+家木丝：你好啊，你们在这里干嘛？
+Jason: 你好啊，我在带luke去参观我们的校园。
+家木丝：哪好啊，我正在上体育课，可有趣啦。
+Jason：好啊，下课再见。
+家木丝：好
+Jason: 我们继续参观吧。在东边是操场，没什么好看的。
+Jason：在西边是我们的教室，也是你将来来学习的地方。这个教室看起来很宽畅，学习的时候也有很多空间。
+猪路可：这个是个很好的学习环境。
+Jason：是的，我们现在去校园中间吃午饭，这里就是食堂和桌子和椅子。
+家木丝：你好啊。
+猪路可：我们坐下聊吧。
+Jason：我们已经参观了所有地方的。下课铃响后你就可以回家了。
+猪路可：好。（pause for 4 seconds）铃响了，我现在要回家了。
+家木丝：好的，拜拜
+Jason：luke拜拜你回家吧。
