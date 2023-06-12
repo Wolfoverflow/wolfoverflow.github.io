@@ -1,6 +1,131 @@
+<!DOCTYPE html>
+<html>
 <head>
-  <title>Home Page</title>
+  <title>The Useless Machine</title>
+  <style>
+    #container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .bulb-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 10px;
+      text-align: center;
+    }
+
+    .bulb-image {
+      width: 20px;
+    }
+
+    .bulb-btn {
+      margin-top: 10px;
+    }
+
+    .hand-animation {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-image: url('https://img-s1.onedio.com/id-6283f409f2d042004140e5fe/rev-0/w-1200/h-1594/f-jpg/s-93c222b019f2b26ec5431bb571479da90ae4019e.jpg');
+      background-size: cover;
+      animation-name: clickAnimation;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+      opacity: 1;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+    }
+
+    @keyframes clickAnimation {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.2);
+      }
+      100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+  </style>
+  <script>
+    function getElementCoordinates(elementId) {
+      var element = document.getElementById(elementId);
+      var rect = element.getBoundingClientRect();
+
+      var coordinates = {
+        top: rect.top + rect.height / 2 + window.pageYOffset,
+        left: rect.left + rect.width / 2 + window.pageXOffset
+      };
+
+      return coordinates;
+    }
+
+    window.addEventListener('DOMContentLoaded', function() {
+      var container = document.getElementById('container');
+
+      for (var i = 0; i < 12; i++) {
+        // Create the bulb container div
+        var bulbContainer = document.createElement('div');
+        bulbContainer.className = 'bulb-container';
+
+        // Create the image element
+        var image = document.createElement('img');
+        image.alt = "bulb";
+        image.src = 'https://i.postimg.cc/KjK1wL3c/bulb-off.png';
+        var uniqueImageId = 'bulb-' + i;
+        image.id = uniqueImageId;
+        image.className = 'bulb-image';
+        bulbContainer.appendChild(image);
+
+        // Create the button element
+        var button = document.createElement('button');
+        button.textContent = 'On';
+        var uniqueButtonId = 'on-' + i;
+        button.id = uniqueButtonId;
+        button.type = "button";
+        button.style.backgroundColor = "#212121";
+        button.style.color = "#ffffff";
+        button.className = 'bulb-btn';
+        button.setAttribute('onclick', 'bulb_on("' + uniqueImageId + '","' + uniqueButtonId + '")');
+        bulbContainer.appendChild(button);
+
+        container.appendChild(bulbContainer);
+      }
+    });
+
+    function bulb_off(imageId) {
+      document.getElementById(imageId).src = 'https://i.postimg.cc/KjK1wL3c/bulb-off.png';
+    }
+
+    function bulb_on(imageId, buttonId) {
+      // Implement the functionality to turn on the bulb here
+      var image = document.getElementById(imageId);
+      image.src = 'https://i.postimg.cc/6QyTynzr/bulb-on.png';
+
+      // Get button coordinates
+      var buttonCoordinates = getElementCoordinates(buttonId);
+
+      // Trigger the hand animation
+      var handAnimation = document.createElement('div');
+      handAnimation.className = 'hand-animation';
+      handAnimation.style.top = buttonCoordinates.top + 'px';
+      handAnimation.style.left = buttonCoordinates.left + 'px';
+      document.body.appendChild(handAnimation);
+
+      setTimeout(function() {
+        bulb_off(imageId);
+        setTimeout(function() {
+          document.body.removeChild(handAnimation);
+        }, 500);
+      }, 2700); // 0.3 seconds before the light turns off (3 seconds total)
+
+    }
+  </script>
 </head>
-<body>
-  <meta http-equiv="Refresh" content="0; url='https://docs.google.com/document/d/1z3_jkDUyU2ihwYEHokxvN4U4aJOh-T3MsnIyVY93ZCY/edit?usp=sharing'" />
+<body style="background-color:#212121;">
+  <div id="container"></div>
 </body>
+</html>
