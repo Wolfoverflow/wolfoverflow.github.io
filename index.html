@@ -2,6 +2,9 @@
 <html>
 <head>
   <title>The Useless Machine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
   <style>
     #container {
       display: flex;
@@ -22,6 +25,11 @@
 
     .bulb-btn {
       margin-top: 10px;
+    }
+    h1 {
+      color: #ffffff;
+      text-align: center;
+      font-family: 'Comfortaa', cursive;
     }
 
     .hand-animation {
@@ -48,6 +56,37 @@
         opacity: 1;
         transform: translate(-50%, -50%) scale(1);
       }
+    }
+
+    .achievement-container {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation-name: slideIn;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+      opacity: 0;
+      z-index: 9999;
+    }
+
+    @keyframes slideIn {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, -200%);
+      }
+      100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .achievement-image {
+      width: 300px;
+      height: 80px;
+      background-image: url('https://minecraftpanda.com/tools/achievement-generator/output?icon=14&title=Achievement%20Get%21&text=Power%20Waster%21');
+      background-size: contain;
+      background-repeat: no-repeat;
     }
   </style>
   <script>
@@ -105,6 +144,37 @@
       var image = document.getElementById(imageId);
       image.src = 'https://i.postimg.cc/6QyTynzr/bulb-on.png';
 
+      // Check if all bulbs are on
+      var allBulbsOn = true;
+      var bulbImages = document.getElementsByClassName('bulb-image');
+      for (var i = 0; i < bulbImages.length; i++) {
+        if (bulbImages[i].src.indexOf('bulb-off') !== -1) {
+          allBulbsOn = false;
+          break;
+        }
+      }
+
+      if (allBulbsOn) {
+        // Create the achievement container
+        var achievementContainer = document.createElement('div');
+        achievementContainer.className = 'achievement-container';
+
+        // Create the achievement image
+        var achievementImage = document.createElement('div');
+        achievementImage.className = 'achievement-image';
+        achievementContainer.appendChild(achievementImage);
+
+        document.body.appendChild(achievementContainer);
+
+        // Set a timeout to remove the achievement container
+        setTimeout(function() {
+          document.body.removeChild(achievementContainer);
+        }, 3000); // 3 seconds
+
+        // Log the achievement to the console
+        console.log('Achievement: Power Waster');
+      }
+
       // Get button coordinates
       var buttonCoordinates = getElementCoordinates(buttonId);
 
@@ -126,6 +196,7 @@
   </script>
 </head>
 <body style="background-color:#212121;">
+  <h1>The Useless Machine</h1>
   <div id="container"></div>
 </body>
 </html>
